@@ -32,7 +32,6 @@ object testingsort extends App {
 
   writer.close()
 
-
   val sqlcontext = new org.apache.spark.sql.SQLContext(sc)
 
   val dfs = sqlcontext.read.json("data/Emp.json")
