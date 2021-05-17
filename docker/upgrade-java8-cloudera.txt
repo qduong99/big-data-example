@@ -1,0 +1,55 @@
+https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html
+--ONLY WORK WITH jdk-8u181-linux-x64.tar.gz
+download jdk-8u181-linux-x64.tar.gz and put to folder : /BDTMain/input/jdk
+
+create terminal on docker Cloudera and type those commands:
+
+su cloudera
+cd $HOME
+tar xzf /BDTMain/input/jdk/jdk-8u181-linux-x64.tar.gz
+
+vi $HOME/.bash_profile
+---copy below lines to ./bash_profile------
+export JAVA_HOME=/usr/java/jdk1.8.0_181/
+export JRE_HOME=/usr/java/jdk1.8.0_181/jre
+PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
+-----------
+
+. ~/.bash_profile
+
+sudo vi /etc/default/bigtop-utils
+-----------------
+# Override JAVA_HOME detection for all bigtop packages
+export JAVA_HOME=/usr/java/jdk1.8.0_181
+----------------
+
+sudo vi /etc/profile
+--------------
+export JAVA_HOME=/usr/java/jdk1.8.0_181
+export JRE_HOME=$JAVA_HOME/jre
+-------------
+
+sudo mv /usr/java/jdk1.7* /home/cloudera/Desktop/tmp
+sudo mv jdk1.8* /usr/java
+
+su
+password: cloudera
+
+cd $HOME
+vi $HOME/.bash_profile
+---------
+export JAVA_HOME=/usr/java/jdk1.8.0_181/
+export JRE_HOME=/usr/java/jdk1.8.0_181/jre
+PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
+-----------
+. ~/.bash_profile
+
+
+//stop and start cloudera docker on docker desktop
+after restarted and logged in to docker, type
+. ~/.bash_profile
+
+[root@quickstart /]# java -version
+java version "1.8.0_181"
+Java(TM) SE Runtime Environment (build 1.8.0_181-b13)
+Java HotSpot(TM) 64-Bit Server VM (build 25.181-b13, mixed mode)
