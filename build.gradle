@@ -30,6 +30,6 @@ jar {
 task publish(type: Copy, dependsOn: jar) {
     copy {
         from jar
-        into '/cloudera/jars'
+        into '/DATA/jars'
     }
 }
