@@ -4,7 +4,6 @@ plugins {
 }
 
 group 'edu.miu'
-version '1.0'
 
 repositories {
     mavenCentral()
