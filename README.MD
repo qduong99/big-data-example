@@ -1,18 +1,32 @@
+# Install Docker
+First install Docker on your machine using the instructions from official website:
+https://docs.docker.com/install/
+
+After installing it, check if Docker is installed correctly opening your terminal and typing the following command:
+
+> $ docker -v
+>
+>  Docker version 20.10.6, build 370c289
+
+# Check out sample project from github
+
+https://github.com/qduong99/big-data-example
+
+pull github project to C:\workspace\MIU\big-data-example ( or any path you want - make sure to change below path to matched with your project)
 
 # Part 1 . Setup (Window) - Run MapReduce/Spark in local mode.
 1. add HADOOP_HOME variable to environment variables
 
-value = C:\workspace\MIU\BD\HADOOP, HADOOP folder data from this GitHub. 
+value = C:\workspace\MIU\big-data-example\HADOOP, HADOOP folder data from this GitHub. 
 ![img.png](img.png)
 
 ![img_1.png](img_1.png)
 
 - Restart Intellij IDE, now you can run the mapreduce / spark locally [Debuggable]
 
-
-
+![img_14.png](img_14.png)
 # Part 2 . Pseudo Mode - Single Cluster Hadoop Instance [Cloudera] 
-1. expose daemon docker port 2375 to intellij
+1. expose daemon docker port 2375 to intellij : Open Docker For Desktop -> Setting :
    ![img_13.png](img_13.png)
    ![img_3.png](img_3.png)
 

@@ -1,12 +1,12 @@
 https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html
 --ONLY WORK WITH jdk-8u181-linux-x64.tar.gz
-download jdk-8u181-linux-x64.tar.gz and put to folder : /BDTMain/input/jdk
+download jdk-8u181-linux-x64.tar.gz and put to folder : /DATA/jdk
 
 create terminal on docker Cloudera and type those commands:
 
 su cloudera
 cd $HOME
-tar xzf /BDTMain/input/jdk/jdk-8u181-linux-x64.tar.gz
+tar xzf /DATA/jdk/jdk-8u181-linux-x64.tar.gz
 
 vi $HOME/.bash_profile
 ---copy below lines to ./bash_profile------
