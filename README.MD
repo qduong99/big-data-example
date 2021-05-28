@@ -18,7 +18,7 @@ pull github project to C:\workspace\MIU\big-data-example ( or any path you want 
 1. add HADOOP_HOME variable to environment variables
 
 value = C:\workspace\MIU\big-data-example\HADOOP, HADOOP folder data from this GitHub. 
-![img.png](img.png)
+![img_15.png](img_15.png)
 
 ![img_1.png](img_1.png)
 
@@ -52,29 +52,35 @@ value = C:\workspace\MIU\big-data-example\HADOOP, HADOOP folder data from this G
 ![img_8.png](img_8.png)
 
 - now you can submit jars file to execute on map-reduce   
-3. upgrade docker cloudera image to java 8 [spark need to write code on java 8]
+3. build jars file and public to share folder, run both "jar" and "publish" tasks
+  ![img_10.png](img_10.png)
+
+
+4. submit the jars to hadoop.
+
+- in "Services" tab in Intellij, right click on cloudera image, click on "create terminal"
+  ![img_11.png](img_11.png)
+
+- execute the hadoop command to run map-reduce :
+> hadoop fs -mkdir input
+>
+> hadoop fs -put /DATA/input/dataFile.txt input
+>
+> hadoop fs -cat input/dataFile.txt
+
+> hadoop jar /DATA/jars/BD.jar edu.miu.mapreduce.WordCount input outputHDFS
+>
+> hadoop fs -ls outputHDFS
+>
+> hadoop fs -cat outputHDFS/part-r-00000
+
+
+# Part 3 . Spark RDD - upgrade Cloudera to JAVA 8 .
+1. upgrade docker cloudera image to java 8 [spark need to write code on java 8]
     - folow the guide line in this file : docker\upgrade-java8-cloudera.txt
 
     - check to make sure cloudera run as java 8 version
     > [root@quickstart /]# java -version
-   
-4. submit the spark jars to hadoop.
-- build jars file and public to share folder, run both "jar" and "publish" tasks
-![img_10.png](img_10.png)
-  
-- in "Services" tab in Intellij, right click on cloudera image, click on "create terminal"
-![img_11.png](img_11.png)
 
-- execute the hadoop command to run map-reduce : 
-> hadoop fs -mkdir input
-> 
-> hadoop fs -put /DATA/input/dataFile.txt input
-> 
-> hadoop fs -cat input/dataFile.txt
-
-> hadoop jar /DATA/jars/BD.jar edu.miu.mapreduce.WordCount input outputHDFS
-> 
-> hadoop fs -ls outputHDFS
-> 
-> hadoop fs -cat outputHDFS/part-r-00000
-
+3. submit the spark jars to hadoop. [repeate step #4 in part 2]
+submit SparkWorkoutJar

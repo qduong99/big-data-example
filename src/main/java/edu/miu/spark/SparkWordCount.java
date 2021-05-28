@@ -17,7 +17,7 @@ public class SparkWordCount {
 
         // Load our input data
         // local = "DATA/input/dataFile.txt"
-        JavaRDD<String> lines = sc.textFile(args[1]);
+        JavaRDD<String> lines = sc.textFile(args[0]);
 
         // Calculate word count
         JavaPairRDD<String, Integer> counts = lines
@@ -28,7 +28,7 @@ public class SparkWordCount {
         //TODO this is for local testing only - run in spark-submit : need to remove this line
         //  local = "DATA/output/count1"
         //  FileUtils.deleteDirectory(new File(args[2]));
-        counts.saveAsTextFile(args[2]);
+        counts.saveAsTextFile(args[1]);
 
         sc.close();
     }
