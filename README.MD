@@ -12,7 +12,7 @@ After installing it, check if Docker is installed correctly opening your termina
 
 https://github.com/qduong99/big-data-example
 
-pull github project to C:\workspace\MIU\big-data-example ( or any path you want - make sure to change below path to matched with your project)
+pull github project to C:\workspace\MIU\big-data-example ( or any path you want - make sure to change below path to match with your project)
 
 # Part 1 . Setup (Window) - Run MapReduce/Spark in local mode.
 1. add HADOOP_HOME variable to environment variables
@@ -37,7 +37,9 @@ value = C:\workspace\MIU\big-data-example\HADOOP, HADOOP folder data from this G
 
    - [intellij] in Services tab, click on Docker 
      
-     ![img_4.png](img_4.png)
+   ![img_4.png](img_4.png)
+   ![img_16.png](img_16.png)
+   
    - click on play icon on Services and Docker connected to Intellij
      
      ![img_5.png](img_5.png)
@@ -55,12 +57,12 @@ value = C:\workspace\MIU\big-data-example\HADOOP, HADOOP folder data from this G
 - popup appears on window , allow Docker to share with your local file --> press "Share It"
 
 ![img_7.png](img_7.png)
-- after Cloudera installed
+- Cloudera installed
 
 ![img_8.png](img_8.png)
 
 - now you can submit jars file to execute on map-reduce   
-3. build jars file and public to share folder, run both "jar" and "publish" tasks
+3. build jars file and public to share folder, run both "jar" then "publish" tasks
 
   ![img_10.png](img_10.png)
 
@@ -87,7 +89,7 @@ value = C:\workspace\MIU\big-data-example\HADOOP, HADOOP folder data from this G
 
 # Part 3 . Spark RDD - upgrade Cloudera to JAVA 8 .
 1. upgrade docker cloudera image to java 8 [spark need to write code on java 8]
-    - folow the guide line in this file : docker\upgrade-java8-cloudera.txt
+    - follow the guidelines in this file : docker\upgrade-java8-cloudera.txt
 
     - check to make sure cloudera run as java 8 version
     > [root@quickstart /]# java -version
