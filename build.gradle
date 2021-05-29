@@ -31,7 +31,6 @@ jar {
 task publish(type: Copy, dependsOn: jar) {
     copy {
         from jar
-        into '/DATA/jars'   //FOR WINDOW
-//        into 'DATA/jars'  //FOR MAC
+        into 'DATA/jars'
     }
 }
