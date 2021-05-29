@@ -1,7 +1,7 @@
 version: '2'
 services:
   cloudera:
-    image: cloudera/quickstart:latest
+    image: qduong/cloudera-java8:v1
     privileged: true
     hostname: quickstart.cloudera
     command: /usr/bin/docker-quickstart
