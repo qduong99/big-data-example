@@ -75,6 +75,12 @@ value = C:\workspace\MIU\big-data-example\HADOOP, HADOOP folder data from this G
     - check to make sure cloudera run as java 8 version
    > [root@quickstart /]# java -version
 
+2. restart cloudera hadoop service.
+
+![img_17.png](img_17.png)
+
+![img_18.png](img_18.png)
+
 
 2. submit the jars to hadoop.
 
@@ -107,3 +113,5 @@ You should STOP/START DOCKER service in Services Tab,
 try not to run docker-compose after upgrading to java 8(if you run docker-compose then you should upgrade to java 8 again because it pulls the original image from cloudera which is java 7)  
 
 ![img_17.png](img_17.png)
+
+![img_18.png](img_18.png)
