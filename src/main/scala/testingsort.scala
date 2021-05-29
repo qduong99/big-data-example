@@ -18,12 +18,12 @@ object testingsort extends App {
   var myFour = myThree.sortBy(_._1, false).sortBy(_._2)
   myFour.foreach(println)
 
-  val writer = new PrintWriter(new File("result.txt"))
+  val writer = new PrintWriter(new File("DATA/output/scala_result.txt"))
 
 
   writer.write("Hello World")
 
-  var tf = sc.textFile("data/dataFile.txt")
+  var tf = sc.textFile("DATA/input/dataFile.txt")
   var counts = tf.flatMap(line => line.split("\\s+")).map(x => (x.toLowerCase(), 1)).reduceByKey(_ + _).sortByKey(true)
   counts.foreach(println)
 
@@ -34,7 +34,7 @@ object testingsort extends App {
 
   val sqlcontext = new org.apache.spark.sql.SQLContext(sc)
 
-  val dfs = sqlcontext.read.json("data/Emp.json")
+  val dfs = sqlcontext.read.json("DATA/input/Emp.json")
 
   dfs.show()
   dfs.printSchema()

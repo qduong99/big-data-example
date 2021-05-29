@@ -2,7 +2,7 @@
   <configuration default="false" name="SparkWordCount" type="Application" factoryName="Application" nameIsGenerated="true">
     <option name="MAIN_CLASS_NAME" value="edu.miu.spark.SparkWordCount" />
     <module name="BD.main" />
-    <option name="PROGRAM_PARAMETERS" value="DATA/input/dataFile.txt DATA/output/count1" />
+    <option name="PROGRAM_PARAMETERS" value="DATA/input/dataFile.txt DATA/output/sparkWorkcount1" />
     <extension name="net.ashald.envfile">
       <option name="IS_ENABLED" value="false" />
       <option name="IS_SUBST" value="false" />
