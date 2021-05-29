@@ -67,21 +67,6 @@ value = C:\workspace\MIU\big-data-example\HADOOP, HADOOP folder data from this G
   ![img_10.png](img_10.png)
 
 
-
-# Part 3 . Spark RDD - upgrade Cloudera to JAVA 8 .
-1. upgrade docker cloudera image to java 8 [spark need to write code on java 8]
-    - follow the guidelines in this file : docker\upgrade-java8-cloudera.txt
-
-    - check to make sure cloudera run as java 8 version
-   > [root@quickstart /]# java -version
-
-2. restart cloudera hadoop service.
-
-![img_17.png](img_17.png)
-
-![img_18.png](img_18.png)
-
-
 2. submit the jars to hadoop.
 
 - in "Services" tab in Intellij, right click on cloudera image, click on "create terminal"
@@ -108,10 +93,3 @@ value = C:\workspace\MIU\big-data-example\HADOOP, HADOOP folder data from this G
 >
 
 
-# IMPORTANCE NOTE : 
-You should STOP/START DOCKER service in Services Tab, 
-try not to run docker-compose after upgrading to java 8(if you run docker-compose then you should upgrade to java 8 again because it pulls the original image from cloudera which is java 7)  
-
-![img_17.png](img_17.png)
-
-![img_18.png](img_18.png)
