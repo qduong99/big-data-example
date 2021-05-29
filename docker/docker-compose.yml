@@ -31,5 +31,6 @@ services:
     stdin_open: true
     volumes:
       - ../DATA/jars:/DATA/jars
+      - ../DATA/jdk:/DATA/jdk
       - ../DATA/output:/DATA/output
       - ../DATA/input:/DATA/input
