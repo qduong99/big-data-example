@@ -4,6 +4,8 @@ plugins {
 }
 
 group 'edu.miu'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -29,6 +31,7 @@ jar {
 task publish(type: Copy, dependsOn: jar) {
     copy {
         from jar
-        into '/DATA/jars'
+        into '/DATA/jars'   //FOR WINDOW
+//        into 'DATA/jars'  //FOR MAC
     }
 }

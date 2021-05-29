@@ -67,7 +67,16 @@ value = C:\workspace\MIU\big-data-example\HADOOP, HADOOP folder data from this G
   ![img_10.png](img_10.png)
 
 
-4. submit the jars to hadoop.
+
+# Part 3 . Spark RDD - upgrade Cloudera to JAVA 8 .
+1. upgrade docker cloudera image to java 8 [spark need to write code on java 8]
+    - follow the guidelines in this file : docker\upgrade-java8-cloudera.txt
+
+    - check to make sure cloudera run as java 8 version
+   > [root@quickstart /]# java -version
+
+
+2. submit the jars to hadoop.
 
 - in "Services" tab in Intellij, right click on cloudera image, click on "create terminal"
   
@@ -87,15 +96,7 @@ value = C:\workspace\MIU\big-data-example\HADOOP, HADOOP folder data from this G
 > hadoop fs -cat outputHDFS/part-r-00000
 
 
-# Part 3 . Spark RDD - upgrade Cloudera to JAVA 8 .
-1. upgrade docker cloudera image to java 8 [spark need to write code on java 8]
-    - follow the guidelines in this file : docker\upgrade-java8-cloudera.txt
-
-    - check to make sure cloudera run as java 8 version
-    > [root@quickstart /]# java -version
-
-3. submit the spark jars to hadoop. [repeate step #4 in part 2]
-submit SparkWorkoutJar
+3. submit the spark jars to hadoop. 
 
 > hadoop jar /DATA/jars/BD.jar edu.miu.mapreduce.SparkWordCount input outputHDFS2
 >
