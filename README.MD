@@ -100,3 +100,10 @@ value = C:\workspace\MIU\big-data-example\HADOOP, HADOOP folder data from this G
 
 > hadoop jar /DATA/jars/BD.jar edu.miu.mapreduce.SparkWordCount input outputHDFS2
 >
+
+
+# IMPORTANCE NOTE : 
+You should STOP/START DOCKER service in Services Tab, 
+try not to run docker-compose after upgrading to java 8(if you run docker-compose then you should upgrade to java 8 again because it pulls the original image from cloudera which is java 7)  
+
+![img_17.png](img_17.png)
