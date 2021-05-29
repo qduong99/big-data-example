@@ -50,7 +50,7 @@ value = C:\workspace\MIU\big-data-example\HADOOP, HADOOP folder data from this G
 
 - or run it from intellij IDE 
 
-![img_2.png](img_2.png)
+![img_19.png](img_19.png)
 
 ![img_6.png](img_6.png)
 
