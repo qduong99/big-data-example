@@ -25,6 +25,7 @@ export JAVA_HOME=/usr/java/jdk1.8.0_181
 
 sudo vi /etc/profile
 --------------
+#export JAVA_HOME=/usr/java/jdk1.7.0_67-cloudera
 export JAVA_HOME=/usr/java/jdk1.8.0_181
 export JRE_HOME=$JAVA_HOME/jre
 -------------
@@ -37,7 +38,7 @@ password: cloudera
 
 cd $HOME
 vi $HOME/.bash_profile
----------
+-----insert those line before PATH=$PATH:$HOME/bin ----
 export JAVA_HOME=/usr/java/jdk1.8.0_181/
 export JRE_HOME=/usr/java/jdk1.8.0_181/jre
 PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
