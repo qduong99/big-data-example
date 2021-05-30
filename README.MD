@@ -14,6 +14,8 @@ https://github.com/qduong99/big-data-example
 
 pull github project to C:\workspace\MIU\big-data-example ( or any path you want - make sure to change below path to match with your project)
 
+JAVA JDK 8 
+
 # Part 1 . Setup (Window) - Run MapReduce/Spark in local mode.
 1. add HADOOP_HOME variable to environment variables
 
