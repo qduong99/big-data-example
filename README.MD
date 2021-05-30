@@ -33,6 +33,9 @@ value = C:\workspace\MIU\big-data-example\HADOOP, HADOOP folder data from this G
 1. expose daemon docker port 2375 to intellij : Open Docker For Desktop -> Setting :
    
    ![img_13.png](img_13.png)
+   
+[Window only] - no need expose for MAC
+
    ![img_3.png](img_3.png)
 
    Click to "Apply & Restart"
