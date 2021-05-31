@@ -25,6 +25,29 @@ value = C:\workspace\MIU\big-data-example\HADOOP, HADOOP folder data from this G
 
 ![img_1.png](img_1.png)
 
+2. check Window lib ddl file
+open command prompt, create folder C:/DATA
+> %HADOOP_HOME%\bin\winutils.exe chmod 777 C:/DATA
+
+if this is working then you are good to go
+some machine need to install "Visual C++ Redistributable"
+
+https://www.microsoft.com/en-us/download/details.aspx?id=48145
+
+https://www.microsoft.com/en-us/download/details.aspx?id=26999
+
+You may get another exception that says
+
+`Exception in thread "main" java.lang.UnsatisfiedLinkError:
+org.apache.hadoop.io.nativeio.NativeIO$Windows.access0(Ljava/lang/String;I)Z
+at org.apache.hadoop.io.nativeio.NativeIO$Windows.access0(Native Method)`
+
+to solve this : change the org.apache.hadoop.io.nativeio.NativeIO.java.bk file to
+org.apache.hadoop.io.nativeio.NativeIO.java (remove ".bk")
+
+reference : https://www.cs.helsinki.fi/u/jilu/paper/hadoop_on_win.pdf
+
+
 - Restart Intellij IDE, now you can run the mapreduce / spark locally [Debuggable]
 
 ![img_14.png](img_14.png)
