@@ -63,11 +63,14 @@ reference : https://www.cs.helsinki.fi/u/jilu/paper/hadoop_on_win.pdf
 
    Click to "Apply & Restart"
 
-   - [intellij] in Services tab, click on Docker 
+   - [intellij] in Services tab, click on Docker [ make sure "Docker" plugin installed in your Intellij ]
      
    ![img_4.png](img_4.png)
-   ![img_16.png](img_16.png)
-   
+
+   ![img_20.png](img_20.png)
+
+   FOR MAC : choose Docker for Mac
+
    - click on play icon on Services and Docker connected to Intellij
      
      ![img_5.png](img_5.png)
