@@ -32,9 +32,9 @@ open command prompt, create folder C:/DATA
 if this is working then you are good to go
 some machine need to install "Visual C++ Redistributable"
 
-https://www.microsoft.com/en-us/download/details.aspx?id=48145
-
 https://www.microsoft.com/en-us/download/details.aspx?id=26999
+
+https://www.microsoft.com/en-us/download/details.aspx?id=48145
 
 You may get another exception that says
 
@@ -118,9 +118,6 @@ reference : https://www.cs.helsinki.fi/u/jilu/paper/hadoop_on_win.pdf
 > hadoop fs -cat outputHDFS/part-r-00000
 
 
-3. submit the spark jars to hadoop. 
 
-> hadoop jar /DATA/jars/BD.jar edu.miu.mapreduce.SparkWordCount input outputHDFS2
->
 
 
