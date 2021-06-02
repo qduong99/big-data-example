@@ -67,7 +67,9 @@ Open PowerShell as Administrator :
 
    ![img_13.png](img_13.png)
 
+open Resource Tab in Docker, add your project path to here.
 
+![img_22.png](img_22.png)
 
 [Window only] - no need expose for MAC
 
