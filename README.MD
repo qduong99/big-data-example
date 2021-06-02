@@ -54,12 +54,25 @@ reference : https://www.cs.helsinki.fi/u/jilu/paper/hadoop_on_win.pdf
 
 # Part 2 . Pseudo Mode - Single Cluster Hadoop Instance [Cloudera] 
 1. expose daemon docker port 2375 to intellij : Open Docker For Desktop -> Setting :
-   
+
+
+![img_21.png](img_21.png)
+
+Make sure Docker is using "Hyper-V backend"
+
+https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v
+
+Open PowerShell as Administrator :
+`DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V`
+
    ![img_13.png](img_13.png)
-   
+
+
+
 [Window only] - no need expose for MAC
 
    ![img_3.png](img_3.png)
+
 
    Click to "Apply & Restart"
 
@@ -68,6 +81,8 @@ reference : https://www.cs.helsinki.fi/u/jilu/paper/hadoop_on_win.pdf
    ![img_4.png](img_4.png)
 
    ![img_20.png](img_20.png)
+
+
 
    FOR MAC : choose Docker for Mac
 
