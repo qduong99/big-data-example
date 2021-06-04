@@ -135,6 +135,12 @@ open Resource Tab in Docker, add your project path to here.
 > hadoop fs -cat outputHDFS/part-r-00000
 
 
+3. Scala support 
+make sure to download scala SDK 2.11.12 on your project. (by click on button "+" in global library)
+![img_25.png](img_25.png)
+
+
+
 
 
 

@@ -20,15 +20,15 @@ public class SparkWordCount {
         JavaRDD<String> lines = sc.textFile(args[0]);
 
         // Calculate word count
-        JavaPairRDD<String, Integer> counts = lines
-                .flatMapToPair(line ->
-                    Arrays.asList(line.split(" ")).stream().map(s -> new Tuple2<>(s, 1)).collect(Collectors.toList())
-                )
-                .reduceByKey((x, y) -> x + y);
+//        JavaPairRDD<String, Integer> counts = lines
+//                .flatMapToPair(line ->
+//                    Arrays.asList(line.split(" ")).stream().map(s -> new Tuple2<>(s, 1)).collect(Collectors.toList())
+//                )
+//                .reduceByKey((x, y) -> x + y);
         //TODO this is for local testing only - run in spark-submit : need to remove this line
         //  local = "DATA/output/count1"
         //  FileUtils.deleteDirectory(new File(args[2]));
-        counts.saveAsTextFile(args[1]);
+//        counts.saveAsTextFile(args[1]);
 
         sc.close();
     }

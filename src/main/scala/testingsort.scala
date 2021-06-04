@@ -1,7 +1,7 @@
 
 import java.io._
 import org.apache.spark._
-
+import org.apache.spark.sql.{DataFrame, SQLContext}
 
 object testingsort extends App {
   val conf = new SparkConf().setAppName("Spark Sort").setMaster("local")
